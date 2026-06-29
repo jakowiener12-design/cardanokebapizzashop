@@ -1,0 +1,2228 @@
+[
+ {
+  "slug": "beliebt",
+  "name": "Beliebte Produkte",
+  "subtitle": "Die Favoriten unserer Gäste.",
+  "sort": 0,
+  "items": [
+   {
+    "number": 35,
+    "name": "Pizza Toscana",
+    "description": "mit Putenschinken & Champignons",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F61b368ed1245b448c1c89e131a625641&w=640&q=75",
+    "tags": "pop",
+    "sort": 0
+   },
+   {
+    "number": 36,
+    "name": "Pizza Tonno",
+    "description": "mit Thunfisch & roten Zwiebeln",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F9521da3ebb97333e6c489057ea7a77e5&w=640&q=75",
+    "tags": "pop",
+    "sort": 1
+   },
+   {
+    "number": 29,
+    "name": "Pizza Margherita",
+    "description": "mit Pizzakäsen",
+    "price": 10.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F009bf156a4b0aaf8138da9fd161c61db&w=640&q=75",
+    "tags": "veg",
+    "sort": 2
+   },
+   {
+    "number": 30,
+    "name": "Pizza Salami",
+    "description": "mit Putensalami",
+    "price": 11.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fd63a5676f073db2ba1c7ce85d6322d87&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": 115,
+    "name": "Rind-Bowl",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F082ee17b7c2689ed587e19da7ae41ecd&w=640&q=75",
+    "tags": "pop",
+    "sort": 4
+   },
+   {
+    "number": 114,
+    "name": "Rind-Dürüm",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "pop",
+    "sort": 5
+   },
+   {
+    "number": 111,
+    "name": "Hühner-Bowl",
+    "description": "",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fde81ba0131342700faf87a293a4e85bc&w=640&q=75",
+    "tags": "pop",
+    "sort": 6
+   },
+   {
+    "number": 110,
+    "name": "Hühner-Dürüm",
+    "description": "",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "pop",
+    "sort": 7
+   },
+   {
+    "number": 109,
+    "name": "Hühner-Sandwich",
+    "description": "",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F6dc93c2c9236f7d146ee4b626fa4e74c&w=640&q=75",
+    "tags": "pop",
+    "sort": 8
+   }
+  ]
+ },
+ {
+  "slug": "pizza",
+  "name": "Pizza Medium",
+  "subtitle": "33 cm. Mit Tomatensauce, Mozzarella & Gouda.",
+  "sort": 1,
+  "items": [
+   {
+    "number": 29,
+    "name": "Pizza Margherita",
+    "description": "mit Pizzakäsen",
+    "price": 10.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F009bf156a4b0aaf8138da9fd161c61db&w=640&q=75",
+    "tags": "veg,pop",
+    "sort": 0
+   },
+   {
+    "number": 30,
+    "name": "Pizza Salami",
+    "description": "mit Putensalami",
+    "price": 11.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fd63a5676f073db2ba1c7ce85d6322d87&w=640&q=75",
+    "tags": "pop",
+    "sort": 1
+   },
+   {
+    "number": 31,
+    "name": "Pizza Cardinale",
+    "description": "mit Putenschinken",
+    "price": 11.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fa1afa3af26a605bd79f482244e4e3cfb&w=640&q=75",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 32,
+    "name": "Pizza Hühnerfleisch",
+    "description": "mit Hühnerdöner",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0bfc02636234e2ce882f8a2249452f9a&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": 33,
+    "name": "Pizza Rindfleisch",
+    "description": "mit Rinddöner",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0e68622627b75b03bf9ef1e3fbc97837&w=640&q=75",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": 34,
+    "name": "Pizza Funghi",
+    "description": "mit Champignons",
+    "price": 11.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fff9c85b56bb486ae6d751c96298b3a5a&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 5
+   },
+   {
+    "number": 35,
+    "name": "Pizza Toscana",
+    "description": "mit Putenschinken & Champignons",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F61b368ed1245b448c1c89e131a625641&w=640&q=75",
+    "tags": "pop",
+    "sort": 6
+   },
+   {
+    "number": 36,
+    "name": "Pizza Tonno",
+    "description": "mit Thunfisch & roten Zwiebeln",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F9521da3ebb97333e6c489057ea7a77e5&w=640&q=75",
+    "tags": "pop",
+    "sort": 7
+   },
+   {
+    "number": 37,
+    "name": "Pizza Sophia-Loren",
+    "description": "mit Schafskäse & zwei Ei",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 8
+   },
+   {
+    "number": 52,
+    "name": "Pizza Sucuk",
+    "description": "mit Sucuk (Wurst)",
+    "price": 13.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F63d25966b35f9b07c2b8b7dbee5aa8b1&w=640&q=75",
+    "tags": "",
+    "sort": 9
+   },
+   {
+    "number": 39,
+    "name": "Pizza Spinaci",
+    "description": "mit Spinat & Schafskäse",
+    "price": 13.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F4469a9d8a8d98728216d20f9ad3a5c3e&w=640&q=75",
+    "tags": "veg",
+    "sort": 10
+   },
+   {
+    "number": 40,
+    "name": "Pizza Rucola",
+    "description": "mit Rucola & Tomaten",
+    "price": 12.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F640e5ec36eb543827fb3c5cbb4b7dd2c&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 11
+   },
+   {
+    "number": 41,
+    "name": "Pizza Bianca",
+    "description": "mit Putensalami & Schafskäse",
+    "price": 13.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fa06598baf576dd939f2201481fe919af&w=640&q=75",
+    "tags": "",
+    "sort": 12
+   },
+   {
+    "number": 42,
+    "name": "Pizza Hawaii",
+    "description": "mit Putenschinken & Ananas",
+    "price": 13.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F94aee80358291367172322e55c2305e8&w=640&q=75",
+    "tags": "",
+    "sort": 13
+   },
+   {
+    "number": 43,
+    "name": "Pizza Vegetaria",
+    "description": "Champignons, Mais, Broccoli, Paprika, Zwiebeln",
+    "price": 13.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fefc6d83e703a94c067fe57925aa19ea1&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 14
+   },
+   {
+    "number": 44,
+    "name": "Pizza Provenciale",
+    "description": "Putenschinken, Rindspeck, Mais, milde Pfefferoni",
+    "price": 13.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F5e3d3711a8d1d06723b83402676de355&w=640&q=75",
+    "tags": "",
+    "sort": 15
+   },
+   {
+    "number": 45,
+    "name": "Pizza Quattro Staggione",
+    "description": "Putenschinken, Champignons & Artischocken",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 16
+   },
+   {
+    "number": 46,
+    "name": "Pizza Quattro Formaggi",
+    "description": "mit vier verschiedenen Käsen",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fde7df2ada19120655f31b694bd6a7c0e&w=640&q=75",
+    "tags": "veg",
+    "sort": 17
+   },
+   {
+    "number": 47,
+    "name": "Pizza Melanzani",
+    "description": "mit Melanzani & Paprika",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F5cd936c0b8634169245e2077479b8c6e&w=640&q=75",
+    "tags": "veg",
+    "sort": 18
+   },
+   {
+    "number": 48,
+    "name": "Pizza Frutti Di Mare",
+    "description": "mit Meeresfrüchten",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 19
+   },
+   {
+    "number": 49,
+    "name": "Pizza Diavolo",
+    "description": "Putenschinken, Rindersalami, Zwiebeln, scharfe Pfefferoni",
+    "price": 13.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F7f5e2a3f8114e95c9e0c73ed7a788053&w=640&q=75",
+    "tags": "spicy",
+    "sort": 20
+   },
+   {
+    "number": 51,
+    "name": "Pizza Mexikaner",
+    "description": "mit Hühnerdöner, Mais & Paprika",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F09567cbc4516a8bd7a332e78706a0c80&w=640&q=75",
+    "tags": "",
+    "sort": 21
+   },
+   {
+    "number": 50,
+    "name": "Pizza Calzone (geklappt)",
+    "description": "mit Putenschinken & Champignons",
+    "price": 12.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 22
+   },
+   {
+    "number": 38,
+    "name": "Pizza Contadino",
+    "description": "mit Rindspeck, roter Zwiebel & Ei",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 23
+   },
+   {
+    "number": 53,
+    "name": "Pizza Capricciosa",
+    "description": "Putenschinken, Champignons, Artischocken, Sardellen, Oliven",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 24
+   },
+   {
+    "number": 54,
+    "name": "Pizza Rusticana",
+    "description": "Putenschinken, Champignons, Artischocken, Oliven, Ei",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F41a945f3a18b37a6ec348dad8e864c7f&w=640&q=75",
+    "tags": "",
+    "sort": 25
+   },
+   {
+    "number": 55,
+    "name": "Cardanopizza",
+    "description": "Hühnerdöner, Spinat, Paprika, Champignons, Mais",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 26
+   },
+   {
+    "number": 56,
+    "name": "Wunschpizza",
+    "description": "mit drei Sorten nach Wahl",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 27
+   }
+  ]
+ },
+ {
+  "slug": "familie",
+  "name": "Familienpizza",
+  "subtitle": "50 cm. Mit Tomatensauce, Mozzarella & Gouda.",
+  "sort": 2,
+  "items": [
+   {
+    "number": 57,
+    "name": "Familienpizza Margherita",
+    "description": "mit Pizzakäsen",
+    "price": 21.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F009bf156a4b0aaf8138da9fd161c61db&w=640&q=75",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": 58,
+    "name": "Familienpizza Salami",
+    "description": "mit Putensalami",
+    "price": 24.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fd63a5676f073db2ba1c7ce85d6322d87&w=640&q=75",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 59,
+    "name": "Familienpizza Cardinale",
+    "description": "mit Putenschinken",
+    "price": 24.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fa1afa3af26a605bd79f482244e4e3cfb&w=640&q=75",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 60,
+    "name": "Familienpizza Hühnerfleisch",
+    "description": "mit Hühnerdöner",
+    "price": 27.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0bfc02636234e2ce882f8a2249452f9a&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": 61,
+    "name": "Familienpizza Rindfleisch",
+    "description": "mit Rinddöner",
+    "price": 28.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0e68622627b75b03bf9ef1e3fbc97837&w=640&q=75",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": 62,
+    "name": "Familienpizza Funghi",
+    "description": "mit Champignons",
+    "price": 24.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fff9c85b56bb486ae6d751c96298b3a5a&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 5
+   },
+   {
+    "number": 63,
+    "name": "Familienpizza Toscana",
+    "description": "mit Putenschinken & Champignons",
+    "price": 25.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F61b368ed1245b448c1c89e131a625641&w=640&q=75",
+    "tags": "",
+    "sort": 6
+   },
+   {
+    "number": 64,
+    "name": "Familienpizza Tonno",
+    "description": "mit Thunfisch & roten Zwiebeln",
+    "price": 25.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F9521da3ebb97333e6c489057ea7a77e5&w=640&q=75",
+    "tags": "",
+    "sort": 7
+   },
+   {
+    "number": 65,
+    "name": "Familienpizza Sophia-Loren",
+    "description": "mit Schafskäse & zwei Ei",
+    "price": 26.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 8
+   },
+   {
+    "number": 79,
+    "name": "Familienpizza Sucuk",
+    "description": "mit Sucuk (Wurst)",
+    "price": 25.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 9
+   },
+   {
+    "number": 67,
+    "name": "Familienpizza Spinaci",
+    "description": "mit Spinat & Schafskäse",
+    "price": 25.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F4469a9d8a8d98728216d20f9ad3a5c3e&w=640&q=75",
+    "tags": "veg",
+    "sort": 10
+   },
+   {
+    "number": 68,
+    "name": "Familienpizza Rucola",
+    "description": "mit Rucola & Tomaten",
+    "price": 25.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F640e5ec36eb543827fb3c5cbb4b7dd2c&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 11
+   },
+   {
+    "number": 69,
+    "name": "Familienpizza Bianca",
+    "description": "mit Putensalami & Schafskäse",
+    "price": 27.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fa06598baf576dd939f2201481fe919af&w=640&q=75",
+    "tags": "",
+    "sort": 12
+   },
+   {
+    "number": 70,
+    "name": "Familienpizza Hawaii",
+    "description": "mit Putenschinken & Ananas",
+    "price": 25.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F94aee80358291367172322e55c2305e8&w=640&q=75",
+    "tags": "",
+    "sort": 13
+   },
+   {
+    "number": 71,
+    "name": "Familienpizza Vegetaria",
+    "description": "Champignons, Mais, Broccoli, Paprika, Zwiebeln",
+    "price": 25.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fefc6d83e703a94c067fe57925aa19ea1&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 14
+   },
+   {
+    "number": 72,
+    "name": "Familienpizza Provenciale",
+    "description": "Putenschinken, Rindspeck, Mais, milde Pfefferoni",
+    "price": 27.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F5e3d3711a8d1d06723b83402676de355&w=640&q=75",
+    "tags": "",
+    "sort": 15
+   },
+   {
+    "number": 73,
+    "name": "Familienpizza Quattro Staggione",
+    "description": "Putenschinken, Champignons & Artischocken",
+    "price": 27.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 16
+   },
+   {
+    "number": 74,
+    "name": "Familienpizza Quattro Formaggi",
+    "description": "mit vier verschiedenen Käsen",
+    "price": 25.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fde7df2ada19120655f31b694bd6a7c0e&w=640&q=75",
+    "tags": "veg",
+    "sort": 17
+   },
+   {
+    "number": 75,
+    "name": "Familienpizza Melanzani",
+    "description": "mit Melanzani & Paprika",
+    "price": 24.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F5cd936c0b8634169245e2077479b8c6e&w=640&q=75",
+    "tags": "veg",
+    "sort": 18
+   },
+   {
+    "number": 76,
+    "name": "Familienpizza Frutti Di Mare",
+    "description": "mit Meeresfrüchten",
+    "price": 28.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 19
+   },
+   {
+    "number": 77,
+    "name": "Familienpizza Diavolo",
+    "description": "Putenschinken, Rindersalami, Zwiebeln, scharfe Pfefferoni",
+    "price": 27.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F7f5e2a3f8114e95c9e0c73ed7a788053&w=640&q=75",
+    "tags": "spicy",
+    "sort": 20
+   },
+   {
+    "number": 78,
+    "name": "Familienpizza Mexikaner",
+    "description": "mit Hühnerdöner, Mais & Paprika",
+    "price": 29.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F09567cbc4516a8bd7a332e78706a0c80&w=640&q=75",
+    "tags": "",
+    "sort": 21
+   },
+   {
+    "number": 66,
+    "name": "Familienpizza Contadino",
+    "description": "mit Rindspeck, roter Zwiebel & Ei",
+    "price": 28.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 22
+   },
+   {
+    "number": 80,
+    "name": "Familienpizza Capricciosa",
+    "description": "Putenschinken, Champignons, Artischocken, Sardellen, Oliven",
+    "price": 27.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 23
+   },
+   {
+    "number": 81,
+    "name": "Familienpizza Rusticana",
+    "description": "Putenschinken, Champignons, Artischocken, Oliven, Ei",
+    "price": 27.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F41a945f3a18b37a6ec348dad8e864c7f&w=640&q=75",
+    "tags": "",
+    "sort": 24
+   },
+   {
+    "number": 82,
+    "name": "Familien Cardanopizza",
+    "description": "Hühnerdöner, Spinat, Paprika, Champignons, Mais",
+    "price": 29.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 25
+   },
+   {
+    "number": 83,
+    "name": "Familien Wunschpizza",
+    "description": "mit drei Sorten nach Wahl",
+    "price": 29.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 26
+   }
+  ]
+ },
+ {
+  "slug": "menue",
+  "name": "Menü",
+  "subtitle": "Mit Eisbergsalat, Gurken, Tomaten, Zwiebeln, Rotkraut, Mildsauce.",
+  "sort": 3,
+  "items": [
+   {
+    "number": null,
+    "name": "Hühner-Sandwich Menü",
+    "description": "",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F6dc93c2c9236f7d146ee4b626fa4e74c&w=640&q=75",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Hühner-Dürüm Menü",
+    "description": "",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Rind-Sandwich Menü",
+    "description": "",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Rind-Dürüm Menü",
+    "description": "",
+    "price": 15.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": null,
+    "name": "Schnitzel Sandwich Menü",
+    "description": "",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": null,
+    "name": "Schnitzel Dürüm Menü",
+    "description": "",
+    "price": 15.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 5
+   },
+   {
+    "number": null,
+    "name": "Falafel Sandwich Menü",
+    "description": "",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 6
+   },
+   {
+    "number": null,
+    "name": "Falafel Dürüm Menü",
+    "description": "",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 7
+   },
+   {
+    "number": null,
+    "name": "Vegetarisches Sandwich Menü",
+    "description": "",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 8
+   },
+   {
+    "number": null,
+    "name": "Vegetarisches Dürüm Menü",
+    "description": "",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 9
+   }
+  ]
+ },
+ {
+  "slug": "pide",
+  "name": "Pide",
+  "subtitle": "",
+  "sort": 4,
+  "items": [
+   {
+    "number": 100,
+    "name": "Pide mit Käse",
+    "description": "Schafskäse, Gouda, Mozzarella",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F4aca7649dcb974a119b42d2e042cd138&w=640&q=75",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": 101,
+    "name": "Pide mit Wurst (Sucuk)",
+    "description": "",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F3132c8755431822cb0da21639d85f489&w=640&q=75",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 102,
+    "name": "Pide mit Spinat",
+    "description": "",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fd7024e2823b3170bab0baacc506f9feb&w=640&q=75",
+    "tags": "veg",
+    "sort": 2
+   },
+   {
+    "number": 103,
+    "name": "Pide mit faschiertem Rindfleisch",
+    "description": "",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fe6ef535e270d5524289604dfbb0ddb87&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": 104,
+    "name": "Pide mit Rinddöner",
+    "description": "",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fe4091966b174b3f8f70eb115ce97f4c0&w=640&q=75",
+    "tags": "",
+    "sort": 4
+   }
+  ]
+ },
+ {
+  "slug": "bpide",
+  "name": "Baguette-Pide",
+  "subtitle": "",
+  "sort": 5,
+  "items": [
+   {
+    "number": null,
+    "name": "Baguette-Pide mit Käse",
+    "description": "Schafskäse, Gouda, Mozzarella",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Baguette-Pide mit Spinat",
+    "description": "mit Spinat & Weichkäse",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Baguette-Pide mit Rinddöner",
+    "description": "",
+    "price": 14.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Baguette-Pide mit Hühnerdöner",
+    "description": "",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": null,
+    "name": "Baguette-Pide mit Sucuk",
+    "description": "",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 4
+   }
+  ]
+ },
+ {
+  "slug": "american",
+  "name": "American-Style-Pizza",
+  "subtitle": "33 cm.",
+  "sort": 6,
+  "items": [
+   {
+    "number": 84,
+    "name": "American-Style Florida",
+    "description": "Putenschinken, Champignons, Mais, milde Pfefferoni",
+    "price": 19.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": 85,
+    "name": "American-Style Chicago",
+    "description": "Putensalami, Rindspeck & rote Zwiebeln",
+    "price": 19.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 86,
+    "name": "American-Style Los Angeles",
+    "description": "Putensalami, rote Zwiebel, scharfe Pfefferoni",
+    "price": 19.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "spicy",
+    "sort": 2
+   },
+   {
+    "number": 87,
+    "name": "American-Style San Francisco",
+    "description": "Putenschinken, Rindspeck, Champignons, Zwiebel, scharfe Pfefferoni",
+    "price": 19.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "spicy",
+    "sort": 3
+   },
+   {
+    "number": 88,
+    "name": "American-Style New York",
+    "description": "Putenschinken, Rindspeck, Mais, milde Pfefferoni",
+    "price": 19.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": 89,
+    "name": "American-Style Miami",
+    "description": "mit drei Zutaten nach Wahl",
+    "price": 19.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 5
+   }
+  ]
+ },
+ {
+  "slug": "mix",
+  "name": "Döner — Gemischtes Fleisch",
+  "subtitle": "Mit Eisbergsalat, Gurken, Tomaten, Zwiebeln, Rotkraut, Mildsauce.",
+  "sort": 7,
+  "items": [
+   {
+    "number": 105,
+    "name": "Mix-Sandwich",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": 106,
+    "name": "Mix-Dürüm",
+    "description": "",
+    "price": 9.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 107,
+    "name": "Mix-Bowl",
+    "description": "",
+    "price": 9.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 108,
+    "name": "Mix-Teller-Bowl",
+    "description": "",
+    "price": 18.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "schnitzel",
+  "name": "Hühnerschnitzel",
+  "subtitle": "Mit Eisbergsalat, Gurken, Tomaten, Zwiebeln, Rotkraut, Mildsauce.",
+  "sort": 8,
+  "items": [
+   {
+    "number": 127,
+    "name": "Schnitzel Sandwich",
+    "description": "",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": 128,
+    "name": "Schnitzel Dürüm",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 129,
+    "name": "Schnitzel Bowl",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 130,
+    "name": "Schnitzel Teller-Bowl",
+    "description": "",
+    "price": 17.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "huhn",
+  "name": "Döner — Hühnerfleisch",
+  "subtitle": "Mit Eisbergsalat, Gurken, Tomaten, Zwiebeln, Rotkraut, Mildsauce.",
+  "sort": 9,
+  "items": [
+   {
+    "number": 109,
+    "name": "Hühner-Sandwich",
+    "description": "",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F6dc93c2c9236f7d146ee4b626fa4e74c&w=640&q=75",
+    "tags": "pop",
+    "sort": 0
+   },
+   {
+    "number": 110,
+    "name": "Hühner-Dürüm",
+    "description": "",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "pop",
+    "sort": 1
+   },
+   {
+    "number": 111,
+    "name": "Hühner-Bowl",
+    "description": "",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fde81ba0131342700faf87a293a4e85bc&w=640&q=75",
+    "tags": "pop",
+    "sort": 2
+   },
+   {
+    "number": 112,
+    "name": "Hühner-Teller-Bowl",
+    "description": "",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Ff9db336047a82dbed09e5607821d71c0&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "rind",
+  "name": "Döner — Rindfleisch",
+  "subtitle": "Mit Eisbergsalat, Gurken, Tomaten, Zwiebeln, Rotkraut, Mildsauce.",
+  "sort": 10,
+  "items": [
+   {
+    "number": 113,
+    "name": "Rind-Sandwich",
+    "description": "",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "pop",
+    "sort": 0
+   },
+   {
+    "number": 114,
+    "name": "Rind-Dürüm",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "pop",
+    "sort": 1
+   },
+   {
+    "number": 115,
+    "name": "Rind-Bowl",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F082ee17b7c2689ed587e19da7ae41ecd&w=640&q=75",
+    "tags": "pop",
+    "sort": 2
+   },
+   {
+    "number": 116,
+    "name": "Rind-Teller-Bowl",
+    "description": "",
+    "price": 17.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F18cf932ca4bb00fd712f65bc54599165&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "burgermenue",
+  "name": "Burger Menü",
+  "subtitle": "",
+  "sort": 11,
+  "items": [
+   {
+    "number": null,
+    "name": "Hühnerdöner-Burger Menü",
+    "description": "",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Rinddöner-Burger Menü",
+    "description": "",
+    "price": 15.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 122,
+    "name": "XL-Burger Menü",
+    "description": "180 g Rindfleisch, Salat, Tomaten, Gurken, Zwiebeln, Hamburgersauce",
+    "price": 19.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 123,
+    "name": "XXL-Burger Menü",
+    "description": "180 g Rindfleisch, Salat, Tomaten, Gurken, Zwiebeln, Hamburgersauce",
+    "price": 23.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": 124,
+    "name": "Cheeseburger Menü",
+    "description": "180 g Rindfleisch, Salat, Tomaten, Gurken, Zwiebeln, Hamburgersauce",
+    "price": 20.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": 125,
+    "name": "Chicken-Burger Menü",
+    "description": "Hühnerfilet, Salat, Gurken, Zwiebeln, Tomaten, Hamburgersauce",
+    "price": 17.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 5
+   },
+   {
+    "number": 126,
+    "name": "Veggie-Burger Menü",
+    "description": "Veggie-Burger, Salat, Tomaten, Zwiebeln, Gurken, Hamburgersauce",
+    "price": 16.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 6
+   }
+  ]
+ },
+ {
+  "slug": "mini",
+  "name": "Minipizza",
+  "subtitle": "24 cm. Mit Tomatensauce, Mozzarella & Gouda.",
+  "sort": 12,
+  "items": [
+   {
+    "number": 5,
+    "name": "Mini-Pizza Margherita",
+    "description": "mit Pizzakäsen",
+    "price": 5.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F009bf156a4b0aaf8138da9fd161c61db&w=640&q=75",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": 6,
+    "name": "Mini-Pizza Salami",
+    "description": "mit Putensalami",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fd63a5676f073db2ba1c7ce85d6322d87&w=640&q=75",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 7,
+    "name": "Mini-Pizza Cardinale",
+    "description": "mit Putenschinken",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fa1afa3af26a605bd79f482244e4e3cfb&w=640&q=75",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 8,
+    "name": "Mini-Pizza Hühnerfleisch",
+    "description": "mit Hühnerdöner",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0bfc02636234e2ce882f8a2249452f9a&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": 9,
+    "name": "Mini-Pizza Rindfleisch",
+    "description": "mit Rinddöner",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0e68622627b75b03bf9ef1e3fbc97837&w=640&q=75",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": 10,
+    "name": "Mini-Pizza Rucola",
+    "description": "mit Rucola & Tomaten",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F640e5ec36eb543827fb3c5cbb4b7dd2c&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 5
+   },
+   {
+    "number": 11,
+    "name": "Mini-Pizza Funghi",
+    "description": "mit Champignons",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fff9c85b56bb486ae6d751c96298b3a5a&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 6
+   },
+   {
+    "number": 12,
+    "name": "Mini-Pizza Toscana",
+    "description": "mit Putenschinken & Champignons",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F61b368ed1245b448c1c89e131a625641&w=640&q=75",
+    "tags": "",
+    "sort": 7
+   },
+   {
+    "number": 13,
+    "name": "Mini-Pizza Sucuk",
+    "description": "mit Sucuk (Wurst)",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F63d25966b35f9b07c2b8b7dbee5aa8b1&w=640&q=75",
+    "tags": "",
+    "sort": 8
+   },
+   {
+    "number": 14,
+    "name": "Mini-Pizza Tonno",
+    "description": "mit Thunfisch & roten Zwiebeln",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F9521da3ebb97333e6c489057ea7a77e5&w=640&q=75",
+    "tags": "",
+    "sort": 9
+   },
+   {
+    "number": 15,
+    "name": "Mini-Pizza Contadino",
+    "description": "mit Rindspeck, roter Zwiebel & Ei",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 10
+   },
+   {
+    "number": 16,
+    "name": "Mini-Pizza Spinaci",
+    "description": "mit Spinat & Schafskäse",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F4469a9d8a8d98728216d20f9ad3a5c3e&w=640&q=75",
+    "tags": "veg",
+    "sort": 11
+   },
+   {
+    "number": 17,
+    "name": "Mini-Pizza Hawaii",
+    "description": "mit Putenschinken & Ananas",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F94aee80358291367172322e55c2305e8&w=640&q=75",
+    "tags": "",
+    "sort": 12
+   },
+   {
+    "number": 18,
+    "name": "Mini-Pizza Vegetaria",
+    "description": "Champignons, Mais, Broccoli, Paprika, Zwiebeln",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fefc6d83e703a94c067fe57925aa19ea1&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 13
+   },
+   {
+    "number": 19,
+    "name": "Mini-Pizza Provenciale",
+    "description": "Putenschinken, Rindspeck, Mais, milde Pfefferoni",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F5e3d3711a8d1d06723b83402676de355&w=640&q=75",
+    "tags": "",
+    "sort": 14
+   },
+   {
+    "number": 20,
+    "name": "Mini-Pizza Quattro Formaggi",
+    "description": "mit vier verschiedenen Käsen",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fde7df2ada19120655f31b694bd6a7c0e&w=640&q=75",
+    "tags": "veg",
+    "sort": 15
+   },
+   {
+    "number": 21,
+    "name": "Mini-Pizza Quattro Staggione",
+    "description": "Putenschinken, Champignons & Artischocken",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 16
+   },
+   {
+    "number": 22,
+    "name": "Mini-Pizza Melanzani",
+    "description": "mit Melanzani & Paprika",
+    "price": 7.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F5cd936c0b8634169245e2077479b8c6e&w=640&q=75",
+    "tags": "veg",
+    "sort": 17
+   },
+   {
+    "number": 23,
+    "name": "Mini-Pizza Frutti Di Mare",
+    "description": "mit Meeresfrüchten",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 18
+   },
+   {
+    "number": 24,
+    "name": "Mini-Pizza Diavolo",
+    "description": "Putenschinken, Rindersalami, Zwiebeln, scharfe Pfefferoni",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F7f5e2a3f8114e95c9e0c73ed7a788053&w=640&q=75",
+    "tags": "spicy",
+    "sort": 19
+   },
+   {
+    "number": 25,
+    "name": "Mini-Pizza Mexikaner",
+    "description": "mit Hühnerdöner, Mais & Paprika",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F09567cbc4516a8bd7a332e78706a0c80&w=640&q=75",
+    "tags": "",
+    "sort": 20
+   },
+   {
+    "number": 26,
+    "name": "Mini-Pizza Capricciosa",
+    "description": "Putenschinken, Champignons, Artischocken, Sardellen, Oliven",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 21
+   },
+   {
+    "number": 27,
+    "name": "Mini-Pizza Rusticana",
+    "description": "Putenschinken, Champignons, Artischocken, Oliven, Ei",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F41a945f3a18b37a6ec348dad8e864c7f&w=640&q=75",
+    "tags": "",
+    "sort": 22
+   },
+   {
+    "number": 28,
+    "name": "Mini-Wunschpizza",
+    "description": "mit drei Sorten nach Wahl",
+    "price": 8.9,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 23
+   }
+  ]
+ },
+ {
+  "slug": "burger",
+  "name": "Burger",
+  "subtitle": "",
+  "sort": 13,
+  "items": [
+   {
+    "number": null,
+    "name": "Hühnerdöner-Burger",
+    "description": "",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Rinddöner-Burger",
+    "description": "",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 117,
+    "name": "XL-Burger",
+    "description": "180 g Rindfleisch, Salat, Tomaten, Gurken, Zwiebeln, Hamburgersauce",
+    "price": 13.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 118,
+    "name": "XXL-Burger",
+    "description": "180 g Rindfleisch, Salat, Tomaten, Gurken, Zwiebeln, Hamburgersauce",
+    "price": 16.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": 119,
+    "name": "Cheeseburger",
+    "description": "180 g Rindfleisch, Salat, Tomaten, Gurken, Zwiebeln, Hamburgersauce",
+    "price": 14.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": 120,
+    "name": "Chicken-Burger",
+    "description": "Hühnerfilet, Salat, Gurken, Zwiebeln, Tomaten, Hamburgersauce",
+    "price": 11.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 5
+   },
+   {
+    "number": 121,
+    "name": "Veggie-Burger",
+    "description": "Veggie-Burger, Salat, Tomaten, Zwiebeln, Gurken, Hamburgersauce",
+    "price": 10.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 6
+   }
+  ]
+ },
+ {
+  "slug": "veggie",
+  "name": "Veggie",
+  "subtitle": "",
+  "sort": 14,
+  "items": [
+   {
+    "number": 135,
+    "name": "Vegetarisches Sandwich",
+    "description": "Schafskäse, Salat, Gurken, Tomaten, Zwiebeln, Rotkraut, Saucen",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fc7d2c6216d801be4ba364a77a45ef558&w=640&q=75",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": 136,
+    "name": "Vegetarisches Dürüm",
+    "description": "Schafskäse, Salat, Gurken, Tomaten, Zwiebeln, Rotkraut, Saucen",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 1
+   },
+   {
+    "number": 137,
+    "name": "Vegetarisches Bowl",
+    "description": "Schafskäse, Salat, Gurken, Tomaten, Zwiebeln, Rotkraut, Saucen",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 2
+   },
+   {
+    "number": 138,
+    "name": "Falafel Sandwich",
+    "description": "Salat, Gurken, Tomaten, Zwiebeln, Rotkraut, Saucen, Humus",
+    "price": 6.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fbcc104bb0700062776d022e45ebdf91d&w=640&q=75",
+    "tags": "veg",
+    "sort": 3
+   },
+   {
+    "number": 139,
+    "name": "Falafel Dürüm",
+    "description": "Salat, Gurken, Tomaten, Zwiebeln, Rotkraut, Saucen, Humus",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fe7231192027e26f5430161aa222796bd&w=640&q=75",
+    "tags": "veg",
+    "sort": 4
+   },
+   {
+    "number": 140,
+    "name": "Falafel Bowl",
+    "description": "Salat, Gurken, Tomaten, Zwiebeln, Rotkraut, Saucen, Humus",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 5
+   },
+   {
+    "number": 141,
+    "name": "Falafel Bowl-Teller",
+    "description": "Salat, Gurken, Tomaten, Zwiebeln, Rotkraut, Saucen, Humus",
+    "price": 14.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 6
+   }
+  ]
+ },
+ {
+  "slug": "saucen",
+  "name": "Saucen",
+  "subtitle": "",
+  "sort": 15,
+  "items": [
+   {
+    "number": 153,
+    "name": "Milde Sauce",
+    "description": "",
+    "price": 0.8,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": 154,
+    "name": "Cocktail Sauce",
+    "description": "",
+    "price": 0.8,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": 155,
+    "name": "Ketchup",
+    "description": "",
+    "price": 0.8,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": 156,
+    "name": "Sriracha-Sauce",
+    "description": "",
+    "price": 0.8,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "spicy",
+    "sort": 3
+   },
+   {
+    "number": 157,
+    "name": "Scharfe Sauce",
+    "description": "",
+    "price": 0.8,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "spicy",
+    "sort": 4
+   },
+   {
+    "number": 158,
+    "name": "Mayonnaise",
+    "description": "",
+    "price": 0.8,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 5
+   },
+   {
+    "number": 159,
+    "name": "Tabasco-Sauce",
+    "description": "",
+    "price": 0.8,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "hot",
+    "sort": 6
+   }
+  ]
+ },
+ {
+  "slug": "salate",
+  "name": "Salate",
+  "subtitle": "",
+  "sort": 16,
+  "items": [
+   {
+    "number": null,
+    "name": "Gemischter Salat klein (500 ml)",
+    "description": "Eisberg, Schafskäse, Zwiebel, Tomaten, Gurken, Mais",
+    "price": 7.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F36d75a619ec4d30394e44427af28fc0c&w=640&q=75",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Gemischter Salat groß (1000 ml)",
+    "description": "Eisberg, Schafskäse, Zwiebel, Tomaten, Gurken, Mais",
+    "price": 9.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F36d75a619ec4d30394e44427af28fc0c&w=640&q=75",
+    "tags": "veg",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Tomatensalat",
+    "description": "Eisberg, Tomaten, rote Zwiebeln & Oliven",
+    "price": 5.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg,vegan",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Thunfischsalat",
+    "description": "Thunfisch, Eisberg, Zwiebeln, Oliven & Mais",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F9aead31635878069d73f2481554e0db6&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "beilagen",
+  "name": "Extra Beilagen",
+  "subtitle": "",
+  "sort": 17,
+  "items": [
+   {
+    "number": null,
+    "name": "Reis",
+    "description": "Hausgemachter Reis",
+    "price": 4.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F40083f6640a33ab306eca001e5883c78&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Pommes / French Fries",
+    "description": "gewürzte Pommes",
+    "price": 4.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F1e4b59e6650088ad74d7066afefc4b81&w=640&q=75",
+    "tags": "veg,vegan",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Hausgemachtes Lavash Brot",
+    "description": "",
+    "price": 1.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F2ccdb3f741daa624dd96035259006d6f&w=640&q=75",
+    "tags": "veg",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Hausgemachtes Sandwich Brot",
+    "description": "",
+    "price": 1.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2Fca7823d476a4e8c885b49e9383a6ea27&w=640&q=75",
+    "tags": "veg",
+    "sort": 3
+   },
+   {
+    "number": null,
+    "name": "Pizza Stangerl — 5 Stück",
+    "description": "",
+    "price": 4.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 4
+   }
+  ]
+ },
+ {
+  "slug": "snacks",
+  "name": "Snacks",
+  "subtitle": "",
+  "sort": 18,
+  "items": [
+   {
+    "number": null,
+    "name": "Chicken Nuggets 8 Stück",
+    "description": "mit knusprigen Pommes",
+    "price": 8.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F8652769ad81a9ec9016ebff1bd9aeb8f&w=640&q=75",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Chicken Nuggets 12 Stück",
+    "description": "mit knusprigen Pommes",
+    "price": 12.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F8652769ad81a9ec9016ebff1bd9aeb8f&w=640&q=75",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Chicken Wings 6 Stück",
+    "description": "mit goldenen Pommes",
+    "price": 9.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0c9d2d8740491a38dff38be229f5cf4a&w=640&q=75",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Chicken Wings 9 Stück",
+    "description": "mit goldenen Pommes",
+    "price": 13.9,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F0c9d2d8740491a38dff38be229f5cf4a&w=640&q=75",
+    "tags": "",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "dessert",
+  "name": "Dessert",
+  "subtitle": "pro Stück",
+  "sort": 19,
+  "items": [
+   {
+    "number": null,
+    "name": "Trilece",
+    "description": "",
+    "price": 5.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F786cc393d3d90922a531a2d4c193141d&w=640&q=75",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Muhallebi",
+    "description": "",
+    "price": 5.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Lotuskuchen",
+    "description": "",
+    "price": 5.5,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F1b110d911e56cf12f4299562ea58f7e1&w=640&q=75",
+    "tags": "veg",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Sütlac — Milchreis",
+    "description": "",
+    "price": 5.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "baklava",
+  "name": "Baklava",
+  "subtitle": "",
+  "sort": 20,
+  "items": [
+   {
+    "number": null,
+    "name": "Soguk Baklava mit Pistazien",
+    "description": "Milch & Schokolade",
+    "price": 2.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Baklava mit Pistazien",
+    "description": "",
+    "price": 2.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F4244d3c681ddffd1003d19a46e67c684&w=640&q=75",
+    "tags": "veg",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Schokobaklava mit Pistazien",
+    "description": "",
+    "price": 2.0,
+    "tax_rate": 10,
+    "image_url": "https://cardanokebapizza.at/_next/image?url=%2Fimages%2F3340835d238ff79615168fb96fef04e1&w=640&q=75",
+    "tags": "veg",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Baklava mit Walnüssen",
+    "description": "",
+    "price": 1.5,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "veg",
+    "sort": 3
+   }
+  ]
+ },
+ {
+  "slug": "getraenke",
+  "name": "Alkoholfreie Getränke",
+  "subtitle": "",
+  "sort": 21,
+  "items": [
+   {
+    "number": null,
+    "name": "Ayran 0,25 l",
+    "description": "",
+    "price": 2.0,
+    "tax_rate": 10,
+    "image_url": "",
+    "tags": "",
+    "sort": 0
+   },
+   {
+    "number": null,
+    "name": "Red Bull Sugarfree 0,25 l",
+    "description": "",
+    "price": 3.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 1
+   },
+   {
+    "number": null,
+    "name": "Red Bull 0,25 l",
+    "description": "",
+    "price": 3.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 2
+   },
+   {
+    "number": null,
+    "name": "Coca-Cola 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 3
+   },
+   {
+    "number": null,
+    "name": "Coca-Cola 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 4
+   },
+   {
+    "number": null,
+    "name": "Coca-Cola Zero 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 5
+   },
+   {
+    "number": null,
+    "name": "Coca-Cola Zero 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 6
+   },
+   {
+    "number": null,
+    "name": "Fanta Orange 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 7
+   },
+   {
+    "number": null,
+    "name": "Fanta Orange 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 8
+   },
+   {
+    "number": null,
+    "name": "Sprite 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 9
+   },
+   {
+    "number": null,
+    "name": "Sprite 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 10
+   },
+   {
+    "number": null,
+    "name": "Almdudler 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 11
+   },
+   {
+    "number": null,
+    "name": "Almdudler 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 12
+   },
+   {
+    "number": null,
+    "name": "Powerade Mountain Blast 0,5 l",
+    "description": "",
+    "price": 3.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 13
+   },
+   {
+    "number": null,
+    "name": "Fuze Tea Zitrone 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 14
+   },
+   {
+    "number": null,
+    "name": "Stillwasser 0,5 l",
+    "description": "",
+    "price": 2.5,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 15
+   },
+   {
+    "number": null,
+    "name": "Römerquelle Still 0,5 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 16
+   },
+   {
+    "number": null,
+    "name": "Römerquelle Prickelnd 0,5 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 17
+   },
+   {
+    "number": null,
+    "name": "Bravo Multivitamin 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 18
+   },
+   {
+    "number": null,
+    "name": "Bravo Multivitamin 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 19
+   },
+   {
+    "number": null,
+    "name": "Uludag Gazoz 0,33 l",
+    "description": "",
+    "price": 2.5,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 20
+   },
+   {
+    "number": null,
+    "name": "Uludag Gazoz 0,5 l",
+    "description": "",
+    "price": 3.0,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 21
+   },
+   {
+    "number": null,
+    "name": "Rauch Eistee Pfirsich 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 22
+   },
+   {
+    "number": null,
+    "name": "Rauch Eistee Pfirsich 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 23
+   },
+   {
+    "number": null,
+    "name": "Rauch Eistee Zitrone 0,33 l",
+    "description": "",
+    "price": 2.75,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 24
+   },
+   {
+    "number": null,
+    "name": "Rauch Eistee Zitrone 0,5 l",
+    "description": "",
+    "price": 3.25,
+    "tax_rate": 20,
+    "image_url": "",
+    "tags": "",
+    "sort": 25
+   }
+  ]
+ }
+]
