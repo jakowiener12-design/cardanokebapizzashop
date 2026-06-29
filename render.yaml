@@ -2,6 +2,7 @@ services:
   - type: web
     name: cardano-backend
     runtime: python
+    plan: free
     buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
     startCommand: "python manage.py migrate && python manage.py seed_menu && python manage.py init_admin && python manage.py init_info && gunicorn config.wsgi"
     envVars:
@@ -13,3 +14,5 @@ services:
         value: "*"
       - key: CORS_ALLOW_ALL
         value: "1"
+      - key: PYTHON_VERSION
+        value: "3.12.3"
