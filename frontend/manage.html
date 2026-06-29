@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardano · Verwaltung</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#f4f3ef; --card:#ffffff; --ink:#1d1c1a; --mut:#7c776e; --line:#e7e4dc;
+    --gold:#a4823f; --gold-d:#8a6c30; --green:#1f7a4d; --red:#b23b3b; --blue:#2b6cb0;
+    --side:#16150f;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;-webkit-font-smoothing:antialiased}
+  button{font-family:inherit;cursor:pointer}
+  input,select,textarea{font-family:inherit;font-size:14px}
+  a{color:inherit}
+
+  /* ---------- Login ---------- */
+  #login{min-height:100vh;display:grid;place-items:center;padding:20px}
+  .lcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 30px;width:min(380px,94vw);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+  .lbrand{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .lbrand .dot{width:30px;height:30px;border-radius:8px;background:var(--side);color:var(--gold);display:grid;place-items:center;font-weight:800}
+  .lcard h1{font-size:19px;margin:14px 0 2px}
+  .lcard p{color:var(--mut);font-size:13px;margin-bottom:20px}
+  .lcard label{display:block;font-size:12px;color:var(--mut);margin:12px 0 5px;font-weight:600}
+  .lcard input{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:#fbfbf9}
+  .lcard input:focus{outline:none;border-color:var(--gold)}
+  .lbtn{width:100%;margin-top:20px;padding:13px;background:var(--side);color:#fff;border:none;border-radius:999px;font-weight:700;font-size:15px}
+  .lbtn:hover{background:#000}
+  .lmsg{color:var(--red);font-size:12.5px;margin-top:12px;min-height:0}
+
+  /* ---------- App-Layout ---------- */
+  #app{display:flex;min-height:100vh}
+  .side{width:228px;background:var(--side);color:#cfc9ba;flex-shrink:0;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+  .side-brand{display:flex;align-items:center;gap:10px;padding:20px 20px 16px}
+  .side-brand .dot{width:32px;height:32px;border-radius:9px;background:var(--gold);color:#16150f;display:grid;place-items:center;font-weight:800}
+  .side-brand b{color:#fff;font-size:15px;letter-spacing:.02em}
+  .side-brand small{display:block;color:#8c8678;font-size:10.5px;font-weight:500}
+  .nav{padding:8px 12px;flex:1}
+  .nav button{display:flex;align-items:center;gap:11px;width:100%;background:none;border:none;color:#cfc9ba;padding:11px 13px;border-radius:10px;font-size:14px;font-weight:600;text-align:left;margin-bottom:2px}
+  .nav button:hover{background:rgba(255,255,255,.06);color:#fff}
+  .nav button.on{background:var(--gold);color:#16150f}
+  .nav svg{width:18px;height:18px;flex-shrink:0}
+  .side-foot{padding:14px;border-top:1px solid rgba(255,255,255,.08)}
+  .side-foot button{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;color:#9a9486;padding:10px 13px;border-radius:10px;font-size:13px;font-weight:600}
+  .side-foot button:hover{color:#fff;background:rgba(255,255,255,.06)}
+
+  main{flex:1;min-width:0;display:flex;flex-direction:column}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+  .topbar h2{font-size:18px}
+  .topbar .sub{color:var(--mut);font-size:12.5px;margin-top:1px}
+  .tb-actions{display:flex;gap:10px;align-items:center}
+  .btn{padding:9px 15px;border-radius:9px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:13px}
+  .btn:hover{border-color:var(--gold)}
+  .btn-gold{background:var(--gold);border-color:var(--gold);color:#fff}
+  .btn-gold:hover{background:var(--gold-d);border-color:var(--gold-d)}
+  .content{padding:24px 26px;max-width:1100px}
+
+  /* ---------- Bestellungen ---------- */
+  .ostat{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .ochip{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:12.5px;font-weight:600;color:var(--mut)}
+  .ochip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .ocard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 18px;margin-bottom:12px}
+  .ohead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .onum{font-weight:800;font-size:15px}
+  .otime{color:var(--mut);font-size:12.5px}
+  .obadge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
+  .b-new{background:#fdeccd;color:#8a5a00}.b-confirmed{background:#dbeafe;color:#1e50a0}
+  .b-preparing{background:#e6e0f8;color:#5b3fa0}.b-ready{background:#d5f0e0;color:#176b41}
+  .b-delivering{background:#cfeefb;color:#0e6a92}.b-done{background:#e7e4dc;color:#666}
+  .b-cancelled{background:#f6dada;color:#9a2f2f}
+  .omode{font-weight:700}.omode.delivery{color:var(--green)}.omode.pickup{color:var(--gold-d)}
+  .ometa{display:flex;gap:18px;flex-wrap:wrap;color:var(--mut);font-size:13px;margin:10px 0}
+  .ometa b{color:var(--ink);font-weight:600}
+  .oitems{border-top:1px dashed var(--line);padding-top:10px;margin-top:6px}
+  .oitems .it{display:flex;justify-content:space-between;font-size:13px;padding:2px 0}
+  .oitems .it .q{color:var(--gold-d);font-weight:700;margin-right:6px}
+  .ofoot{display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:12px;flex-wrap:wrap}
+  .ototal{font-size:16px;font-weight:800}
+  .ofoot select{padding:8px 11px;border:1px solid var(--line);border-radius:9px;background:#fbfbf9;font-weight:600}
+
+  /* ---------- Speisekarte ---------- */
+  .catblock{margin-bottom:26px}
+  .cathead{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:10px}
+  .cathead h3{font-size:16px}
+  .cathead .csub{color:var(--mut);font-size:12.5px;font-weight:500}
+  .catdel{background:none;border:none;color:var(--mut);font-size:12.5px;font-weight:600}
+  .catdel:hover{color:var(--red)}
+  .irow{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:8px}
+  .ithumb{width:52px;height:52px;border-radius:9px;background:#efece4;flex-shrink:0;object-fit:cover;display:grid;place-items:center;color:#c3bcae;font-weight:800;overflow:hidden}
+  .ithumb img{width:100%;height:100%;object-fit:cover}
+  .iinfo{flex:1;min-width:0}
+  .iname{font-weight:700;font-size:14px}
+  .idesc{color:var(--mut);font-size:12.5px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .iprice{font-weight:700;font-size:14px;white-space:nowrap}
+  .itax{font-size:10.5px;color:var(--mut);font-weight:600}
+  .iact{display:flex;gap:6px;align-items:center;flex-shrink:0}
+  .iact button{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:7px 10px;font-size:12.5px;font-weight:600}
+  .iact .edit:hover{border-color:var(--gold)}
+  .iact .del:hover{border-color:var(--red);color:var(--red)}
+  .toggle{position:relative;width:42px;height:24px;border-radius:999px;background:#d8d3c8;border:none;flex-shrink:0;transition:.2s}
+  .toggle.on{background:var(--green)}
+  .toggle::after{content:"";position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s}
+  .toggle.on::after{left:20px}
+  .unav{opacity:.55}
+
+  /* ---------- Restaurantdaten ---------- */
+  .formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;max-width:760px}
+  .fgroup{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px;grid-column:span 2}
+  .fgroup h3{font-size:14px;margin-bottom:14px;color:var(--gold-d);text-transform:uppercase;letter-spacing:.06em;font-size:11.5px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field{margin-bottom:12px}
+  .field.full{grid-column:span 2}
+  .field label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px;font-weight:600}
+  .field input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#fbfbf9}
+  .field input:focus{outline:none;border-color:var(--gold)}
+
+  /* ---------- Modal ---------- */
+  .ov{position:fixed;inset:0;background:rgba(20,18,14,.45);opacity:0;visibility:hidden;transition:.2s;z-index:40}
+  .ov.on{opacity:1;visibility:visible}
+  .modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-46%);width:min(460px,94vw);max-height:90vh;overflow:auto;background:var(--card);border-radius:16px;z-index:50;opacity:0;visibility:hidden;transition:.2s;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+  .modal.on{opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+  .mhead{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+  .mhead h3{font-size:16px}
+  .mclose{background:none;border:none;font-size:22px;color:var(--mut);line-height:1}
+  .mbody{padding:18px 20px}
+  .mbody .field{margin-bottom:14px}
+  .mbody textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#fbfbf9;resize:vertical;min-height:60px}
+  .mbody select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#fbfbf9}
+  .mfoot{display:flex;gap:10px;padding:16px 20px;border-top:1px solid var(--line)}
+  .mfoot .btn{flex:1;text-align:center;padding:12px}
+
+  .empty{text-align:center;color:var(--mut);padding:50px 20px;font-size:14px}
+  .loading{text-align:center;color:var(--mut);padding:40px}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:10px;font-size:13.5px;font-weight:600;opacity:0;transition:.25s;z-index:60;pointer-events:none}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  @media(max-width:760px){
+    .side{position:fixed;left:-228px;z-index:30;transition:.25s;box-shadow:0 0 40px rgba(0,0,0,.3)}
+    .side.open{left:0}
+    .menu-toggle{display:grid !important}
+    .formgrid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}
+    .content{padding:18px 16px}.topbar{padding:14px 16px}
+  }
+  .menu-toggle{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:9px;background:var(--card);place-items:center}
+  .menu-toggle svg{width:20px;height:20px}
+
+  /* ---------- Umsätze ---------- */
+  .perbar{display:flex;gap:8px;margin-bottom:18px}
+  .rtable{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .rtable th,.rtable td{padding:11px 14px;text-align:right;font-size:13px;border-bottom:1px solid var(--line)}
+  .rtable th{background:#faf9f6;color:var(--mut);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+  .rtable th:first-child,.rtable td:first-child{text-align:left}
+  .rtable tfoot td{font-weight:800;background:#faf9f6}
+  .rtable td.num{font-variant-numeric:tabular-nums}
+
+  /* ---------- Beleg / Druck ---------- */
+  #printArea{display:none}
+  .receipt{font-family:'Courier New',monospace;max-width:360px;margin:0 auto;color:#000;padding:6px}
+  .rc-biz{text-align:center;font-weight:800;font-size:14px}
+  .rc-org{text-align:center;font-size:10.5px;margin-top:2px}
+  .rc-line{border-top:1px dashed #999;margin:8px 0}
+  .rc-meta div,.rc-sum,.rc-it{display:flex;justify-content:space-between;font-size:12px;padding:1px 0}
+  .rc-it .q{font-weight:700;margin-right:6px}
+  .rc-total{display:flex;justify-content:space-between;font-size:15px;font-weight:800;margin-top:6px;padding-top:6px;border-top:1px solid #000}
+  .rc-vh{font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin:6px 0 4px}
+  .rc-vrow{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;font-size:11px}
+  .rc-vrow span:nth-child(n+2){text-align:right}
+  .rc-foot{font-size:9.5px;text-align:center;margin-top:10px;line-height:1.5}
+  @media print{
+    body>*{display:none !important}
+    #printArea{display:block !important}
+    @page{margin:10mm}
+  }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <div class="lcard">
+    <div class="lbrand"><span class="dot">C</span><b>Cardano</b></div>
+    <h1>Verwaltung</h1>
+    <p>Melde dich mit deinem Admin-Zugang an.</p>
+    <label>Benutzer oder E-Mail</label>
+    <input id="luser" autocomplete="username" placeholder="admin">
+    <label>Passwort</label>
+    <input id="lpass" type="password" autocomplete="current-password" placeholder="••••••••">
+    <button class="lbtn" onclick="doLogin()">Anmelden</button>
+    <div class="lmsg" id="lmsg"></div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" hidden>
+  <aside class="side" id="side">
+    <div class="side-brand"><span class="dot">C</span><div><b>Cardano</b><small>Verwaltung</small></div></div>
+    <nav class="nav">
+      <button data-view="orders" class="on" onclick="nav('orders')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h12"/></svg>Bestellungen</button>
+      <button data-view="menu" onclick="nav('menu')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Speisekarte</button>
+      <button data-view="revenue" onclick="nav('revenue')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-8"/></svg>Umsätze</button>
+      <button data-view="info" onclick="nav('info')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>Restaurantdaten</button>
+    </nav>
+    <div class="side-foot"><button onclick="doLogout()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 17l5-5-5-5M21 12H9M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>Abmelden</button></div>
+  </aside>
+
+  <main>
+    <div class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="menu-toggle" onclick="document.getElementById('side').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+        <div><h2 id="vtitle">Bestellungen</h2><div class="sub" id="vsub">Eingehende Bestellungen</div></div>
+      </div>
+      <div class="tb-actions" id="tbActions"></div>
+    </div>
+    <div class="content" id="content"><div class="loading">Lade…</div></div>
+  </main>
+</div>
+
+<!-- Item-Modal -->
+<div class="ov" id="ov" onclick="closeModal()"></div>
+<div class="modal" id="modal">
+  <div class="mhead"><h3 id="mTitle">Artikel</h3><button class="mclose" onclick="closeModal()">×</button></div>
+  <div class="mbody" id="mBody"></div>
+  <div class="mfoot" id="mFoot"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div id="printArea"></div>
+
+<script>
+/* === Backend-Adresse ===
+   Liegt dieses Admin-Panel auf GitHub Pages (eigene Adresse), hier die Adresse
+   deines gehosteten Backends eintragen, z. B.:
+       var BACKEND_URL = "https://cardano-backend.onrender.com";
+   Leer lassen, wenn das Panel direkt vom Backend ausgeliefert wird. */
+var BACKEND_URL = "";
+var API = BACKEND_URL || ((location.protocol==="http:"||location.protocol==="https:") ? location.origin : "");
+var INFO = null;
+function tk(){try{return localStorage.getItem("cardano_admin_token")||"";}catch(e){return "";}}
+function setTk(t){try{t?localStorage.setItem("cardano_admin_token",t):localStorage.removeItem("cardano_admin_token");}catch(e){}}
+function H(json){var h={};if(json)h["Content-Type"]="application/json";var t=tk();if(t)h["Authorization"]="Token "+t;return h;}
+function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");setTimeout(function(){t.classList.remove("on");},2200);}
+function eur(n){return (Math.round(n*100)/100).toFixed(2).replace(".",",")+" €";}
+function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+/* ---------- Auth ---------- */
+function doLogin(){
+  var u=document.getElementById("luser").value.trim(), p=document.getElementById("lpass").value;
+  if(!u||!p){document.getElementById("lmsg").textContent="Bitte Benutzer und Passwort eingeben.";return;}
+  fetch(API+"/api/auth/login/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:u,password:p})})
+   .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+   .then(function(x){
+     if(!x.ok){document.getElementById("lmsg").textContent=x.j.detail||"Anmeldung fehlgeschlagen.";return;}
+     if(!x.j.is_staff){document.getElementById("lmsg").textContent="Dieses Konto hat keine Admin-Rechte.";return;}
+     setTk(x.j.token); showApp();
+   }).catch(function(){document.getElementById("lmsg").textContent="Keine Verbindung zum Server.";});
+}
+function doLogout(){setTk("");location.reload();}
+function showApp(){
+  document.getElementById("login").style.display="none";
+  document.getElementById("app").hidden=false;
+  fetch(API+"/api/admin/info/",{headers:H(false)}).then(function(r){return r.ok?r.json():null;}).then(function(d){INFO=d;}).catch(function(){});
+  nav("orders");
+}
+
+/* ---------- Navigation ---------- */
+var CURRENT="orders";
+var TITLES={orders:["Bestellungen","Eingehende Bestellungen"],menu:["Speisekarte","Artikel und Kategorien verwalten"],revenue:["Umsätze","Auswertung für die Buchhaltung"],info:["Restaurantdaten","Alle Angaben an einer Stelle"]};
+function nav(v){
+  CURRENT=v;
+  document.querySelectorAll(".nav button").forEach(function(b){b.classList.toggle("on",b.dataset.view===v);});
+  document.getElementById("vtitle").textContent=TITLES[v][0];
+  document.getElementById("vsub").textContent=TITLES[v][1];
+  document.getElementById("side").classList.remove("open");
+  if(v==="orders")renderOrdersView();
+  if(v==="menu")renderMenuView();
+  if(v==="revenue")renderRevenueView();
+  if(v==="info")renderInfoView();
+}
+
+/* ---------- Bestellungen ---------- */
+var ORD_FILTER="", ordTimer=null;
+var STATUS=[["new","Neu"],["confirmed","Bestätigt"],["preparing","In Zubereitung"],["ready","Fertig"],["delivering","In Lieferung"],["done","Abgeschlossen"],["cancelled","Storniert"]];
+function statusLabel(s){for(var i=0;i<STATUS.length;i++)if(STATUS[i][0]===s)return STATUS[i][1];return s;}
+function renderOrdersView(){
+  document.getElementById("tbActions").innerHTML='<button class="btn" onclick="loadOrders()">Aktualisieren</button>';
+  var chips='<div class="ostat"><button class="ochip'+(ORD_FILTER===""?" on":"")+'" onclick="setOrdFilter(\'\')">Alle</button>';
+  STATUS.forEach(function(s){chips+='<button class="ochip'+(ORD_FILTER===s[0]?" on":"")+'" onclick="setOrdFilter(\''+s[0]+'\')">'+s[1]+'</button>';});
+  chips+='</div>';
+  document.getElementById("content").innerHTML=chips+'<div id="ordList"><div class="loading">Lade…</div></div>';
+  loadOrders();
+  if(ordTimer)clearInterval(ordTimer);
+  ordTimer=setInterval(function(){if(CURRENT==="orders")loadOrders(true);},15000);
+}
+function setOrdFilter(s){ORD_FILTER=s;renderOrdersView();}
+function loadOrders(silent){
+  fetch(API+"/api/admin/orders/"+(ORD_FILTER?"?status="+ORD_FILTER:""),{headers:H(false)})
+   .then(function(r){if(r.status===401||r.status===403){doLogout();return null;}return r.ok?r.json():null;})
+   .then(function(list){
+     if(!list)return; var el=document.getElementById("ordList"); if(!el)return;
+     window.__ORDERS={}; list.forEach(function(o){window.__ORDERS[o.id]=o;});
+     if(!list.length){el.innerHTML='<div class="empty">Noch keine Bestellungen.<br>Sobald ein Kunde im Shop bestellt, erscheint sie hier.</div>';return;}
+     el.innerHTML=list.map(orderCard).join("");
+   }).catch(function(){});
+}
+function orderCard(o){
+  var dt=new Date(o.created_at);
+  var when=dt.toLocaleDateString("de-AT")+" "+dt.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"});
+  var items=(o.items||[]).map(function(i){return '<div class="it"><span><span class="q">'+i.quantity+'×</span>'+esc(i.name)+'</span><span>'+eur(parseFloat(i.line_total))+'</span></div>';}).join("");
+  var addr=o.mode==="delivery"?esc(o.address):"Abholung im Lokal";
+  var opts=STATUS.map(function(s){return '<option value="'+s[0]+'"'+(s[0]===o.status?" selected":"")+'>'+s[1]+'</option>';}).join("");
+  return '<div class="ocard">'
+    +'<div class="ohead"><div><span class="onum">'+esc(o.number)+'</span> &nbsp;<span class="otime">'+when+'</span></div>'
+    +'<span class="obadge b-'+o.status+'">'+statusLabel(o.status)+'</span></div>'
+    +'<div class="ometa"><span class="omode '+o.mode+'">'+(o.mode==="delivery"?"Lieferung":"Abholung")+'</span>'
+    +'<span><b>'+esc(o.customer_name)+'</b></span><span>'+esc(o.phone)+'</span>'
+    +(o.wish_time?'<span>Wunsch: <b>'+esc(o.wish_time)+'</b></span>':'')+'</div>'
+    +'<div style="color:var(--mut);font-size:13px">'+addr+'</div>'
+    +'<div class="oitems">'+items
+    +'<div class="it" style="color:var(--mut)"><span>Zwischensumme</span><span>'+eur(parseFloat(o.subtotal))+'</span></div>'
+    +(parseFloat(o.delivery_fee)>0?'<div class="it" style="color:var(--mut)"><span>Liefergebühr</span><span>'+eur(parseFloat(o.delivery_fee))+'</span></div>':'')
+    +(parseFloat(o.tip)>0?'<div class="it" style="color:var(--mut)"><span>Trinkgeld</span><span>'+eur(parseFloat(o.tip))+'</span></div>':'')
+    +'</div>'
+    +'<div class="ofoot"><span class="ototal">'+eur(parseFloat(o.total))+'</span>'
+    +'<div style="display:flex;gap:8px;align-items:center"><button class="btn" onclick="printOrder('+o.id+')">Beleg drucken</button>'
+    +'<select onchange="changeStatus('+o.id+',this.value)">'+opts+'</select></div></div>'
+    +'</div>';
+}
+function changeStatus(pk,val){
+  fetch(API+"/api/admin/orders/"+pk+"/",{method:"PATCH",headers:H(true),body:JSON.stringify({status:val})})
+   .then(function(r){if(r.ok){toast("Status aktualisiert");loadOrders(true);}else toast("Fehler beim Speichern");}).catch(function(){toast("Keine Verbindung");});
+}
+
+/* ---------- Speisekarte ---------- */
+var MENU=[];
+function renderMenuView(){
+  document.getElementById("tbActions").innerHTML='<button class="btn" onclick="openCat()">+ Kategorie</button><button class="btn btn-gold" onclick="openItem(null)">+ Artikel</button>';
+  document.getElementById("content").innerHTML='<div class="loading">Lade…</div>';
+  loadMenu();
+}
+function loadMenu(){
+  fetch(API+"/api/admin/menu/",{headers:H(false)})
+   .then(function(r){if(r.status===401||r.status===403){doLogout();return null;}return r.ok?r.json():null;})
+   .then(function(cats){
+     if(!cats)return; MENU=cats; var c=document.getElementById("content");
+     if(!cats.length){c.innerHTML='<div class="empty">Noch keine Kategorien.<br>Lege zuerst eine Kategorie an.</div>';return;}
+     c.innerHTML=cats.map(catBlock).join("");
+   }).catch(function(){});
+}
+function catBlock(cat){
+  var items=(cat.items||[]).map(itemRow).join("")||'<div style="color:var(--mut);font-size:13px;padding:6px 2px">Keine Artikel</div>';
+  return '<div class="catblock"><div class="cathead"><div><h3>'+esc(cat.name)+'</h3>'
+    +(cat.subtitle?'<div class="csub">'+esc(cat.subtitle)+'</div>':'')+'</div>'
+    +'<button class="catdel" onclick="delCat('+cat.id+',\''+esc(cat.name)+'\')">Kategorie löschen</button></div>'
+    +items+'</div>';
+}
+function itemRow(it){
+  var th=it.image_url?'<img src="'+esc(it.image_url)+'" alt="" onerror="this.style.display=\'none\';this.parentNode.textContent=\'C\'">':'C';
+  return '<div class="irow'+(it.available?'':' unav')+'">'
+    +'<div class="ithumb">'+th+'</div>'
+    +'<div class="iinfo"><div class="iname">'+(it.number?'<span style="color:var(--mut)">'+it.number+' · </span>':'')+esc(it.name)+'</div>'
+    +(it.description?'<div class="idesc">'+esc(it.description)+'</div>':'')+'</div>'
+    +'<div style="text-align:right"><div class="iprice">'+eur(parseFloat(it.price))+'</div><div class="itax">'+it.tax_rate+'% MwSt</div></div>'
+    +'<div class="iact">'
+    +'<button class="toggle'+(it.available?' on':'')+'" title="Verfügbar" onclick="toggleItem('+it.id+','+(it.available?0:1)+')"></button>'
+    +'<button class="edit" onclick="openItem('+it.id+')">Bearbeiten</button>'
+    +'<button class="del" onclick="delItem('+it.id+',\''+esc(it.name)+'\')">×</button>'
+    +'</div></div>';
+}
+function findItem(id){for(var i=0;i<MENU.length;i++){var its=MENU[i].items||[];for(var j=0;j<its.length;j++)if(its[j].id===id)return its[j];}return null;}
+function toggleItem(id,val){
+  fetch(API+"/api/admin/items/"+id+"/",{method:"PATCH",headers:H(true),body:JSON.stringify({available:!!val})})
+   .then(function(r){if(r.ok){toast(val?"Artikel verfügbar":"Artikel ausgeblendet");loadMenu();}else toast("Fehler");}).catch(function(){toast("Keine Verbindung");});
+}
+function delItem(id,name){
+  if(!confirm('Artikel "'+name+'" wirklich löschen?'))return;
+  fetch(API+"/api/admin/items/"+id+"/",{method:"DELETE",headers:H(false)})
+   .then(function(r){if(r.ok){toast("Artikel gelöscht");loadMenu();}else toast("Fehler");}).catch(function(){toast("Keine Verbindung");});
+}
+function delCat(id,name){
+  if(!confirm('Kategorie "'+name+'" mit allen Artikeln löschen?'))return;
+  fetch(API+"/api/admin/categories/"+id+"/",{method:"DELETE",headers:H(false)})
+   .then(function(r){if(r.ok){toast("Kategorie gelöscht");loadMenu();}else toast("Fehler");}).catch(function(){toast("Keine Verbindung");});
+}
+function openItem(id){
+  var it=id?findItem(id):null;
+  document.getElementById("mTitle").textContent=it?"Artikel bearbeiten":"Neuer Artikel";
+  var catOpts=MENU.map(function(c){return '<option value="'+c.id+'"'+(it&&it.category===c.id?" selected":"")+'>'+esc(c.name)+'</option>';}).join("");
+  document.getElementById("mBody").innerHTML=
+     '<div class="field"><label>Kategorie</label><select id="fCat">'+catOpts+'</select></div>'
+    +'<div class="field"><label>Name</label><input id="fName" value="'+esc(it?it.name:"")+'"></div>'
+    +'<div class="field"><label>Beschreibung</label><textarea id="fDesc">'+esc(it?it.description:"")+'</textarea></div>'
+    +'<div class="frow"><div class="field"><label>Preis (€)</label><input id="fPrice" type="number" step="0.01" value="'+(it?it.price:"")+'"></div>'
+    +'<div class="field"><label>Steuersatz</label><select id="fTax"><option value="10"'+(!it||it.tax_rate==10?" selected":"")+'>10 % (Speisen)</option><option value="20"'+(it&&it.tax_rate==20?" selected":"")+'>20 % (Getränke)</option></select></div></div>'
+    +'<div class="frow"><div class="field"><label>Artikelnr. (optional)</label><input id="fNum" type="number" value="'+(it&&it.number!=null?it.number:"")+'"></div>'
+    +'<div class="field"><label>Tags (Komma)</label><input id="fTags" value="'+esc(it?it.tags:"")+'" placeholder="z. B. veg, pop"></div></div>'
+    +'<div class="field"><label>Bild-URL (optional)</label><input id="fImg" value="'+esc(it?it.image_url:"")+'" placeholder="https://…"></div>';
+  document.getElementById("mFoot").innerHTML='<button class="btn" onclick="closeModal()">Abbrechen</button><button class="btn btn-gold" onclick="saveItem('+(id||"null")+')">Speichern</button>';
+  openModal();
+}
+function saveItem(id){
+  var body={category:parseInt(document.getElementById("fCat").value,10),name:document.getElementById("fName").value.trim(),
+    description:document.getElementById("fDesc").value.trim(),price:document.getElementById("fPrice").value,
+    tax_rate:parseInt(document.getElementById("fTax").value,10),tags:document.getElementById("fTags").value.trim(),
+    image_url:document.getElementById("fImg").value.trim()};
+  var num=document.getElementById("fNum").value.trim(); if(num)body.number=parseInt(num,10);
+  if(!body.name||!body.price){toast("Name und Preis sind nötig");return;}
+  var url=id?(API+"/api/admin/items/"+id+"/"):(API+"/api/admin/items/");
+  fetch(url,{method:id?"PATCH":"POST",headers:H(true),body:JSON.stringify(body)})
+   .then(function(r){if(r.ok){toast("Gespeichert");closeModal();loadMenu();}else r.json().then(function(j){toast("Fehler: "+JSON.stringify(j));});}).catch(function(){toast("Keine Verbindung");});
+}
+function openCat(){
+  document.getElementById("mTitle").textContent="Neue Kategorie";
+  document.getElementById("mBody").innerHTML='<div class="field"><label>Name</label><input id="cName" placeholder="z. B. Pizzen"></div>'
+    +'<div class="field"><label>Untertitel (optional)</label><input id="cSub" placeholder="kurze Beschreibung"></div>';
+  document.getElementById("mFoot").innerHTML='<button class="btn" onclick="closeModal()">Abbrechen</button><button class="btn btn-gold" onclick="saveCat()">Anlegen</button>';
+  openModal();
+}
+function saveCat(){
+  var name=document.getElementById("cName").value.trim();
+  if(!name){toast("Name nötig");return;}
+  fetch(API+"/api/admin/categories/",{method:"POST",headers:H(true),body:JSON.stringify({name:name,subtitle:document.getElementById("cSub").value.trim()})})
+   .then(function(r){if(r.ok){toast("Kategorie angelegt");closeModal();loadMenu();}else toast("Fehler");}).catch(function(){toast("Keine Verbindung");});
+}
+
+/* ---------- Restaurantdaten ---------- */
+var INFO_FIELDS=[
+  ["Betrieb",[["name","Name"],["owner","Inhaber"],["street","Straße"],["zip","PLZ"],["city","Ort"]]],
+  ["Rechtliches",[["uid","UID"],["fn","Firmenbuch"],["gisa","GISA"]]],
+  ["Kontakt",[["phone","Telefon (Anzeige)"],["phone_tel","Telefon (Wahl-Link)"],["email","E-Mail"],["hours","Öffnungszeiten"],["payment","Zahlung"]]],
+  ["Lieferung",[["delivery_fee","Liefergebühr (€)"],["free_delivery_from","Gratis Lieferung ab (€)"]]],
+  ["Social Media",[["instagram","Instagram"],["facebook","Facebook"],["tiktok","TikTok"],["whatsapp","WhatsApp"]]]
+];
+function renderInfoView(){
+  document.getElementById("tbActions").innerHTML='<button class="btn btn-gold" onclick="saveInfo()">Speichern</button>';
+  document.getElementById("content").innerHTML='<div class="loading">Lade…</div>';
+  fetch(API+"/api/admin/info/",{headers:H(false)})
+   .then(function(r){if(r.status===401||r.status===403){doLogout();return null;}return r.ok?r.json():null;})
+   .then(function(d){
+     if(!d)return;
+     var html='<div class="formgrid">';
+     INFO_FIELDS.forEach(function(g){
+       html+='<div class="fgroup"><h3>'+g[0]+'</h3><div class="frow">';
+       g[1].forEach(function(f){html+='<div class="field"><label>'+f[1]+'</label><input id="if_'+f[0]+'" value="'+esc(d[f[0]]==null?"":d[f[0]])+'"></div>';});
+       html+='</div></div>';
+     });
+     html+='<div class="fgroup"><h3>Zahlungen (Online)</h3>'
+       +'<div class="field full"><label><input type="checkbox" id="if_online_payment" '+(d.online_payment?"checked":"")+' style="width:auto;margin-right:8px;vertical-align:middle">Online-Zahlung aktivieren</label></div>'
+       +'<div class="frow"><div class="field"><label>Anbieter</label><input id="if_payment_provider" value="'+esc(d.payment_provider||"stripe")+'"></div>'
+       +'<div class="field"><label>Stripe Publishable Key</label><input id="if_stripe_publishable_key" value="'+esc(d.stripe_publishable_key||"")+'" placeholder="pk_live_…"></div></div>'
+       +'<div class="field full"><label>Stripe Secret Key '+(d.stripe_secret_set?"<span style=\"color:var(--green)\">· gesetzt</span>":"")+'</label><input id="if_stripe_secret_key" type="password" placeholder="'+(d.stripe_secret_set?"gesetzt – zum Ändern neu eingeben":"sk_live_…")+'"></div>'
+       +'<div style="font-size:11.5px;color:var(--mut);line-height:1.5">Damit Online-Zahlung wirklich funktioniert, muss das Backend online gehostet sein. Der Secret Key wird sicher gespeichert und nie an Kunden ausgeliefert.</div></div>';
+     html+='</div>';
+     document.getElementById("content").innerHTML=html;
+   }).catch(function(){});
+}
+function saveInfo(){
+  var body={};
+  INFO_FIELDS.forEach(function(g){g[1].forEach(function(f){var el=document.getElementById("if_"+f[0]);if(el)body[f[0]]=el.value;});});
+  var op=document.getElementById("if_online_payment");if(op)body.online_payment=op.checked;
+  var pp=document.getElementById("if_payment_provider");if(pp)body.payment_provider=pp.value;
+  var pk=document.getElementById("if_stripe_publishable_key");if(pk)body.stripe_publishable_key=pk.value;
+  var sk=document.getElementById("if_stripe_secret_key");if(sk&&sk.value)body.stripe_secret_key=sk.value;
+  fetch(API+"/api/admin/info/",{method:"PUT",headers:H(true),body:JSON.stringify(body)})
+   .then(function(r){if(r.ok)toast("Restaurantdaten gespeichert");else toast("Fehler beim Speichern");}).catch(function(){toast("Keine Verbindung");});
+}
+
+/* ---------- Beleg drucken ---------- */
+function rcN(n){return (Math.round((n||0)*100)/100).toFixed(2).replace(".",",");}
+function printNode(html){document.getElementById("printArea").innerHTML=html;window.print();}
+function buildReceipt(o){
+  var i=INFO||{};var dt=new Date(o.created_at);var p=function(n){return (n<10?"0":"")+n;};
+  var ds=p(dt.getDate())+"."+p(dt.getMonth()+1)+"."+dt.getFullYear(), ts=p(dt.getHours())+":"+p(dt.getMinutes());
+  var b10=0,b20=0;
+  var rows=(o.items||[]).map(function(it){var line=parseFloat(it.line_total);var mk=it.tax_rate===20?"B":"A";if(it.tax_rate===20)b20+=line;else b10+=line;return '<div class="rc-it"><span><span class="q">'+it.quantity+'×</span>'+esc(it.name)+'</span><span>'+rcN(line)+' '+mk+'</span></div>';}).join("");
+  var deliv=parseFloat(o.delivery_fee), tip=parseFloat(o.tip);
+  if(deliv>0)b10+=deliv;
+  var v10=b10*10/110,v20=b20*20/120,n10=b10-v10,n20=b20-v20;
+  var sums='<div class="rc-sum"><span>Zwischensumme</span><span>'+rcN(parseFloat(o.subtotal))+'</span></div>';
+  if(deliv>0)sums+='<div class="rc-sum"><span>Liefergebühr</span><span>'+rcN(deliv)+'</span></div>';
+  if(tip>0)sums+='<div class="rc-sum"><span>Trinkgeld</span><span>'+rcN(tip)+'</span></div>';
+  var vt='<div class="rc-vrow" style="font-weight:700"><span>Satz</span><span>Netto</span><span>MwSt</span><span>Brutto</span></div>';
+  if(b10>0)vt+='<div class="rc-vrow"><span>A 10%</span><span>'+rcN(n10)+'</span><span>'+rcN(v10)+'</span><span>'+rcN(b10)+'</span></div>';
+  if(b20>0)vt+='<div class="rc-vrow"><span>B 20%</span><span>'+rcN(n20)+'</span><span>'+rcN(v20)+'</span><span>'+rcN(b20)+'</span></div>';
+  return '<div class="receipt"><div class="rc-biz">'+esc((i.name||"Cardano Kebapizza e.U.").toUpperCase())+'</div>'
+    +'<div class="rc-org">'+esc(i.street||"")+' · '+esc(i.zip||"")+' '+esc(i.city||"")+'</div>'
+    +'<div class="rc-org">UID '+esc(i.uid||"")+' · '+esc(i.fn||"")+' · Tel '+esc(i.phone||"")+'</div><div class="rc-line"></div>'
+    +'<div class="rc-meta"><div><span>Beleg-Nr.</span><b>'+esc(o.number)+'</b></div>'
+    +'<div><span>Datum / Uhrzeit</span><b>'+ds+' '+ts+'</b></div>'
+    +'<div><span>Art</span><b>'+(o.mode==="delivery"?"Lieferung":"Abholung")+'</b></div>'
+    +(o.wish_time?'<div><span>Wunschzeit</span><b>'+esc(o.wish_time)+'</b></div>':'')+'</div><div class="rc-line"></div>'
+    +rows+'<div class="rc-line"></div>'+sums
+    +'<div class="rc-total"><span>GESAMT</span><span>'+rcN(parseFloat(o.total))+' €</span></div>'
+    +'<div class="rc-line"></div><div class="rc-vh">Enthaltene MwSt.</div>'+vt
+    +'<div class="rc-foot">Alle Beträge in Euro, inkl. MwSt.<br>A = 10 %, B = 20 %<br>Der amtliche signierte Kassenbeleg (RKSV) wird im Lokal ausgestellt.</div></div>';
+}
+function printOrder(id){var o=(window.__ORDERS||{})[id];if(o)printNode(buildReceipt(o));}
+
+/* ---------- Umsätze ---------- */
+var REV_PERIOD="day";
+var PERIODS=[["day","Tage"],["week","Wochen"],["month","Monate"],["year","Jahre"]];
+function renderRevenueView(){
+  document.getElementById("tbActions").innerHTML='<button class="btn" onclick="printRevenue()">Drucken / PDF</button>';
+  var bar='<div class="perbar">'+PERIODS.map(function(p){return '<button class="ochip'+(REV_PERIOD===p[0]?" on":"")+'" onclick="setPeriod(\''+p[0]+'\')">'+p[1]+'</button>';}).join("")+'</div>';
+  document.getElementById("content").innerHTML=bar+'<div id="revBody"><div class="loading">Lade…</div></div>';
+  loadRevenue();
+}
+function setPeriod(p){REV_PERIOD=p;renderRevenueView();}
+function loadRevenue(){
+  fetch(API+"/api/admin/revenue/?period="+REV_PERIOD,{headers:H(false)})
+   .then(function(r){if(r.status===401||r.status===403){doLogout();return null;}return r.ok?r.json():null;})
+   .then(function(d){if(!d)return;document.getElementById("revBody").innerHTML=revTable(d);}).catch(function(){});
+}
+function revTable(d){
+  if(!d.rows.length)return '<div class="empty">Noch keine Umsätze in diesem Zeitraum.</div>';
+  var head=({day:"Tag",week:"Woche",month:"Monat",year:"Jahr"})[d.period]||"Zeitraum";
+  var rows=d.rows.map(function(r){return '<tr><td>'+esc(r.period)+'</td><td class="num">'+r.count+'</td><td class="num">'+rcN(r.net)+'</td><td class="num">'+rcN(r.vat10)+'</td><td class="num">'+rcN(r.vat20)+'</td><td class="num">'+rcN(r.tip)+'</td><td class="num">'+rcN(r.total)+' €</td></tr>';}).join("");
+  var s=d.summary;
+  return '<table class="rtable" id="revTbl"><thead><tr><th>'+head+'</th><th>Best.</th><th>Netto</th><th>MwSt 10%</th><th>MwSt 20%</th><th>Trinkgeld</th><th>Gesamt</th></tr></thead>'
+    +'<tbody>'+rows+'</tbody>'
+    +'<tfoot><tr><td>Summe</td><td class="num">'+s.count+'</td><td class="num">'+rcN(s.net)+'</td><td class="num">'+rcN(s.vat10)+'</td><td class="num">'+rcN(s.vat20)+'</td><td class="num">'+rcN(s.total-s.net-s.vat10-s.vat20)+'</td><td class="num">'+rcN(s.total)+' €</td></tr></tfoot></table>';
+}
+function printRevenue(){
+  var tbl=document.getElementById("revTbl");if(!tbl){toast("Keine Daten");return;}
+  var i=INFO||{};var pl=({day:"nach Tagen",week:"nach Wochen",month:"nach Monaten",year:"nach Jahren"})[REV_PERIOD];
+  var html='<div style="font-family:sans-serif;color:#000;padding:10px;max-width:720px;margin:0 auto">'
+    +'<h2 style="margin:0 0 2px">'+esc(i.name||"Cardano Kebapizza e.U.")+'</h2>'
+    +'<div style="color:#555;font-size:12px;margin-bottom:2px">'+esc(i.street||"")+' · '+esc(i.zip||"")+' '+esc(i.city||"")+' · UID '+esc(i.uid||"")+'</div>'
+    +'<h3 style="margin:14px 0 8px">Umsatzauswertung '+pl+'</h3>'
+    +'<div style="font-size:11px;color:#666;margin-bottom:10px">Erstellt am '+new Date().toLocaleDateString("de-AT")+'. Ohne stornierte Bestellungen. Beträge in Euro.</div>'
+    +tbl.outerHTML+'</div>';
+  printNode(html);
+}
+
+
+function openModal(){document.getElementById("ov").classList.add("on");document.getElementById("modal").classList.add("on");}
+function closeModal(){document.getElementById("ov").classList.remove("on");document.getElementById("modal").classList.remove("on");}
+
+/* ---------- Start ---------- */
+if(tk()){
+  fetch(API+"/api/admin/info/",{headers:H(false)}).then(function(r){
+    if(r.ok){showApp();}else{setTk("");}
+  }).catch(function(){});
+}
+</script>
+</body>
+</html>
